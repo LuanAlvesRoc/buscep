@@ -1,0 +1,377 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --bg-color: rgb(0, 0, 0);
+  --primary-color: #EBCE07
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #000000 31%,  #000000 99%); 
+  overflow-x: hidden;
+  overflow-y: hidden;
+ 
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+header .logo{
+  color: rgba(255, 255, 255, 0.877);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+header ul li a {
+  
+  cursor: pointer;
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+header ul li a:hover{
+  background: #FFDA4C;
+  color: #2b1055;
+}
+div.cursor{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 2px dashed rgb(80, 106, 255);
+  position: absolute;  
+  animation: cursor 5s linear infinite;
+}
+
+@keyframes cursor{
+  to{
+      transform: rotate(0deg);
+  }
+  from{
+      transform: rotate(-360deg);
+  }
+}
+
+.container {
+    
+    margin-top: 50px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    width: 80%;
+    padding: 20px;
+    gap: 40px;
+    margin-bottom: 0%;
+    
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.buscar {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 40px;
+  right: -620px;
+  bottom: 20%;
+}
+
+.buscar label {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: relative;
+  top:-6px;
+  left: 10px;
+  font-size: 20px;
+  color: #FFDA4C;
+  transition: .5s;
+  cursor: text;
+  width: 50px;
+  
+}
+
+.buscar input {
+  position: absolute;
+  background-color:#FFDA4C;
+  width: 50%;
+  height: 4px;
+  bottom: 0;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  transition: .5s;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.buscar input:focus,
+.buscar input:valid {
+  height: 100%;
+  margin-top: 15px;
+}
+
+.buscar input:focus + label,
+.buscar input:valid + label {
+  top: -40px;
+  left: 120px;
+}
+.buscar2{
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 40px;
+  right: -5px;
+  bottom: -200%;
+}
+.buscar2 label{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: relative;
+  top:-6px;
+  left: 7px;
+  font-size: 20px;
+  color: #FFDA4C;
+  transition: .5s;
+  cursor: text;
+  width: 50px;
+}
+.buscar2 input{
+  position: absolute;
+  background-color:#FFDA4C;
+  width: 70%;
+  height: 4px;
+  bottom: 0;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  transition: .5s;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+.buscar2 input:focus,
+.buscar2 input:valid {
+  height: 100%;
+  margin-top: 15px;
+}
+
+.buscar2 input:focus + label,
+.buscar2 input:valid + label {
+  top: -40px;
+  left: 140px;
+}
+.buscar3{
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 40px;
+  right: -580px;
+  bottom: -400%;
+}
+.buscar3 label{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: relative;
+  top:-6px;
+  left: 10px;
+  font-size: 20px;
+  color: #FFDA4C;
+  transition: .5s;
+  cursor: text;
+  width: 50px;
+}
+.buscar3 input{
+  position: absolute;
+  background-color:#FFDA4C;
+  width: 70%;
+  height: 4px;
+  bottom: 0;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  transition: .5s;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+.buscar3 input:focus,
+.buscar3 input:valid {
+  height: 100%;
+  margin-top: 15px;
+}
+
+.buscar3 input:focus + label,
+.buscar3 input:valid + label {
+  top: -40px;
+  left: 152px;
+}
+.buscar4{
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 40px;
+  right: -5px;
+  bottom: -200%;
+}
+.buscar4 label{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: relative;
+  top:-6px;
+  left: 10px;
+  font-size: 20px;
+  color: #FFDA4C;
+  transition: .5s;
+  cursor: text;
+  width: 50px;
+}
+.buscar4 input{
+  position: absolute;
+  background-color:#FFDA4C;
+  width: 70%;
+  height: 4px;
+  bottom: 0;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  transition: .5s;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+.buscar4 input:focus,
+.buscar4 input:valid {
+  height: 100%;
+  margin-top: 15px;
+}
+
+.buscar4 input:focus + label,
+.buscar4 input:valid + label {
+  top: -40px;
+  left: 150px;
+}
+.buscar5{
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 40px;
+  right: -580px;
+  bottom: -400%;
+}
+.buscar5 label{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: relative;
+  top:-6px;
+  left: 10px;
+  font-size: 20px;
+  color: #FFDA4C;
+  transition: .5s;
+  cursor: text;
+  width: 50px;
+}
+.buscar5 input{
+  position: absolute;
+  background-color:#FFDA4C;
+  width: 70%;
+  height: 4px;
+  bottom: 0;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  transition: .5s;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+.buscar5 input:focus,
+.buscar5 input:valid {
+  height: 100%;
+  margin-top: 15px;
+}
+
+.buscar5 input:focus + label,
+.buscar5 input:valid + label {
+  top: -40px;
+  left: 150px;
+}
+
+.container button {
+    
+    justify-self: center;
+    width: 200px;
+    height: 50px;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    background-color: #FFDA4C;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-top: 200px;
+    margin-left: 415px;
+}
+.bolaenerg{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-left:-650px ;
+    margin-top: -450px;
+}
+
+.bolaenerg span{
+    position: absolute;
+    width: calc(300px + var(--i));
+    height: calc(300px + var(--i));
+    background: var(--clr);
+    border-radius: 50%;
+    transform-origin: calc(100px + var(--i));
+    animation: animate 5s linear infinite;
+    animation-duration: calc(var(--d));
+    mix-blend-mode: plus-lighter;
+    filter: blur(30px);
+}
+
+.bolaenerg span:nth-child(even){
+    animation-direction: reverse;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }   
+}
